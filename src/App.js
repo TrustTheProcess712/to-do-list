@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./index.css";
+import { useState } from "react";
+import Header from "./components/Header.jsx";
+import ListPreview from "./components/ListPreview.jsx";
 
 function App() {
+  const [list, setList] = useState([
+    { id: 1, text: "Get petrol" },
+    { id: 2, text: "Pick kids up" },
+    { id: 3, text: "Make tea" },
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Header></Header>
+      <ListPreview list={list}></ListPreview>
     </div>
   );
 }
