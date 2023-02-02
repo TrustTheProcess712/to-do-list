@@ -9,8 +9,8 @@
 * {
   margin: 0;
   font-family: "Itim";
-  color: #e50914;
-  background-color: black;
+  color: green;
+  background-color: rgb(8, 8, 8);
 }
 
 .App {
@@ -23,9 +23,10 @@
 .header {
   margin: 12px auto;
   text-align: center;
-  border: 2px solid white;
   border-radius: 4px;
-  box-shadow: 2px 1px 1px white;
+  border: 1px solid blue;
+  padding: 8px;
+  box-shadow: 2px 4px blue;
 }
 
 .header h1 {
@@ -38,4 +39,57 @@
   margin: 0 auto;
   display: flex;
   justify-content: center;
+}
+
+.list-preview h3 {
+  margin-top: 12px;
+}
+
+.list-preview button {
+  color: green;
+  margin-left: 12px;
+  border-radius: 4px;
+  font-size: 50%;
+  border: 1px solid blue;
+  box-shadow: 2px 4px blue;
+}
+
+.list-preview button:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+/* form */
+
+.form button {
+  color: green;
+  margin: 0 auto;
+  border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid blue;
+  box-shadow: 2px 4px blue;
+  display: flex;
+  justify-content: center;
+}
+
+.form button:hover {
+  color: yellow;
+  cursor: pointer;
+}
+
+.form {
+  margin-top: 8px;
+}
+
+.form input {
+  border-radius: 4px;
+  border: 1px solid blue;
+  box-shadow: 2px 4px blue;
+  margin: 12px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.form input:focus {
+  outline: none;
 }
