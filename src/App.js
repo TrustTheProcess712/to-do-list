@@ -16,7 +16,7 @@ function App() {
     <div className='App'>
       <Header></Header>
       <ListPreview list={list} setList={setList}></ListPreview>
-      <AddToDo setList={setList}></AddToDo>
+      <AddToDo list={list} setList={setList}></AddToDo>
     </div>
   );
 }

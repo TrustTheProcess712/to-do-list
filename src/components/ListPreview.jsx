@@ -1,17 +1,11 @@
-import { useState } from "react";
-
 const ListPreview = ({ list, setList }) => {
-  const [itemId, setItemId] = useState("");
-
   const newList = [...list];
 
-  const handleDelete = (e) => {
-    setItemId(e.target.value);
-    let finalList = newList.filter((task) => {
-      return task.id != itemId;
-    });
+  const handleDelete = (id) => {
+    const finalList = newList.filter((todo) => todo.id !== id);
     setList(finalList);
   };
+  console.log(list);
 
   return (
     <section className='list-preview'>
@@ -20,9 +14,7 @@ const ListPreview = ({ list, setList }) => {
           <li key={todo.id}>
             <h3>
               {todo.text}
-              <button value={todo.id} onClick={handleDelete}>
-                Done
-              </button>
+              <button onClick={() => handleDelete(todo.id)}>Done</button>
             </h3>
           </li>
         ))}
